@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4eto766njpfx"]
+
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_p0ddv"]
+[ext_resource type="Texture2D" uid="uid://c6h62qdfdu8p5" path="res://sprites/Spiked Ball.png" id="2_k5jy8"]
+
+[node name="Obstacle" type="Area2D"]
+top_level = true
+scale = Vector2(1.16, 1.16)
+script = ExtResource("1_p0ddv")
+
+[node name="SpikedBall" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_k5jy8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(5, -10.5, 5, -9, 5.8, -9, 11, -10.3, 11, -4.8, 10.6, -4, 11.5, -4, 14, -0.7, 14, 2, 11.5, 5, 10, 5, 10, 6, 11.3, 11, 5.8, 11, 5, 10.6, 5, 11.4, 2.4, 14, -1.4, 14, -4, 11.4, -4, 10, -4.8, 10, -10, 11.3, -10, 5.8, -9.6, 5, -10.5, 5, -14, 0.4, -14, -0.3, -13.6, -1, -12.5, -1, -10.5, -4, -9, -4, -9, -4.8, -10.3, -10, -4.8, -10, -4, -9.6, -4, -10.5, -1, -12.5, -1, -13.6, -0.3, -14, 0.4, -14)
+
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]
