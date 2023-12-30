@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://noik24rnhk2r"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_k5fv3"]
+[ext_resource type="PackedScene" uid="uid://dbowvkfewrvf3" path="res://scenes/tilemap.tscn" id="2_ytjak"]
+[ext_resource type="PackedScene" uid="uid://4iji02ix0umh" path="res://scenes/player.tscn" id="3_0qi4s"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_k5fv3")
+metadata/_edit_horizontal_guides_ = [802.0, 804.0]
+metadata/_edit_vertical_guides_ = [1582.0]
+
+[node name="Obstacle_container" type="Node2D" parent="."]
+
+[node name="TileMap" parent="." instance=ExtResource("2_ytjak")]
+layer_0/z_index = 820
+
+[node name="Player" parent="." instance=ExtResource("3_0qi4s")]
+position = Vector2(-154, 477)

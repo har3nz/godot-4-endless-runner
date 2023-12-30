@@ -2,7 +2,7 @@ extends Node
 
 var obstacle = preload("res://scenes/tilemap.tscn")
 
-var max_obstacle = 1000
+var max_obstacle = 20
 
 func _ready() -> void:
 	for i in range(max_obstacle):
